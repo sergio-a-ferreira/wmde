@@ -1,0 +1,166 @@
+! ============================================================================
+! to enable at runtime:
+! $ xrdb ~/.Xresources
+! 
+! Based on:
+! https://github.com/MaskRay/Config/blob/master/home/.Xresources
+! https://gitlab.com/dwt1/dotfiles/-/blob/master/.Xresources
+!
+! See also:
+! https://wiki.debian.org/Xresources
+! https://wiki.archlinux.org/title/Xterm#Configuration
+! ============================================================================
+! ----------------------------------------------------------------------------
+! Xft - X font settings
+! ----------------------------------------------------------------------------
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcdfilter
+
+
+! ----------------------------------------------------------------------------
+! XTerm
+! ----------------------------------------------------------------------------
+! Application Resources
+XTerm.termName: xterm-256color
+
+XTerm.vt100.locale: true
+! to force UTF-8, set XTerm.vt100.locale to false and uncomment the following line
+!XTerm.vt100.utf8: true
+
+! geometry
+XTerm.vt100.geometry: 80x32
+
+! transparency
+XTerm*transparent: true
+
+! borders
+XTerm.borderWidth: 1
+XTerm.borderColor: #bbc2cf
+
+! padding
+XTerm*internalBorder: 8
+
+! use clipboard to paste 
+XTerm.vt100.selectToClipboard: true
+
+XTerm*highlightSelection: true
+
+! fonts
+XTerm.vt100.renderFont: true
+XTerm.vt100.faceName: xft:Mononoki Nerd Font
+XTerm.vt100.faceSize: 10
+XTerm.vt100.font: 8x14
+
+! keybind controling font size
+XTerm.vt100.translations: #override \n\
+  Ctrl <Key> j: smaller-vt-font() \n\
+  Ctrl <Key> k: larger-vt-font()
+
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)
+XTerm.vt100.loginshell: true
+
+! scrollback
+XTerm.vt100.saveLines: 16384
+
+! scrollbar
+XTerm*scrollBar: false
+XTerm*scroll.scrollbar.width: 2
+XTerm*multiScroll: true
+XTerm*fastScroll: true
+XTerm*jumpScroll: true
+XTerm*rightScrollBar: true
+
+! allow selecting email/url by double click
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+!xterm*curses: on 
+!xterm*pointerShape: pirate 
+!xterm*jumpScroll: on 
+
+! cursor
+!Xcursor.theme: ~/.icons/Pulse-Glass
+!Xcursor.size: 16
+
+! not tested
+!x11-ssh-askpass*background:             #000000
+!x11-ssh-askpass*foreground:             #ffffff
+!x11-ssh-askpass.Button*background:      #000000
+!x11-ssh-askpass.Indicator*foreground:   #ff9900
+!x11-ssh-askpass.Indicator*background:   #090909
+!x11-ssh-askpass*topShadowColor:         #000000
+!x11-ssh-askpass*bottomShadowColor:      #000000
+!x11-ssh-askpass.*borderWidth:           1
+
+! resource names can be retrieved from ~/.xscreensaver
+! xscreensaver.timeout: 3
+! xscreensaver.lock: true
+! xscreensaver.lockTimeout: 5
+! xscreensaver.mode: blank
+
+
+! ----------------------------------------------------------------------------
+! FOR ALL PROGRAMS THAT USE XRESOURCES
+! --> includes xterm and urxvt
+! ----------------------------------------------------------------------------
+*foreground:   #bbc2cf
+*background:   #282c34
+*.foreground:  #bbc2cf
+*.background:  #282c34
+
+*.cursorColor:  #bbc2cf
+*.cursorBlink:	true
+*.cursorUnderLine: true
+
+! black 
+*.color0:       #000000
+*color0:        #000000
+! red
+*.color1:       #ff0000
+*color1:        #ff0000
+! green
+*.color2:       #008000
+*color2:        #008000
+! yellow
+*.color3:       #ffff00
+*color3:        #ffff00
+! blue
+*.color4:       #005fd7
+*color4:        #005fd7
+! magenta
+*.color5:       #8700af
+*color5:        #8700af
+! dark cyan
+*.color6:       #00d7af
+*color6:        #00d7af
+! light grey
+*.color7:       #abb2bf
+*color7:        #abb2bf
+! dark grey
+*.color8:       #4e4e4e
+*color8:        #4e4e4e
+! pink
+*.color9:       #ff00ff
+*color9:        #ff00ff
+! light green
+*.color10:      #5fd700
+*color10:       #5fd700
+! orange
+*.color11:      #d78700
+*color11:       #d78700
+! light blue
+*.color12:      #00afff
+*color12:       #00afff
+! purple
+*.color13:      #8700ff
+*color13:       #8700ff
+! light cyan
+*.color14:      #00ffff
+*color14:       #00ffff
+! white
+*.color15:      #ffffff
+*color15:       #ffffff
