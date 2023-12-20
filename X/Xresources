@@ -40,7 +40,7 @@ XTerm*transparent: true
 
 ! borders
 XTerm.borderWidth: 1
-XTerm.borderColor: #bbc2cf
+!XTerm.borderColor: #bbc2cf
 
 ! padding
 XTerm*internalBorder: 8
@@ -53,8 +53,8 @@ XTerm*highlightSelection: true
 ! fonts
 XTerm.vt100.renderFont: true
 XTerm.vt100.faceName: xft:Mononoki Nerd Font
-XTerm.vt100.faceSize: 10
-XTerm.vt100.font: 8x14
+XTerm.vt100.faceSize: 9
+XTerm.vt100.font: 10x18
 
 ! keybind controling font size
 XTerm.vt100.translations: #override \n\
@@ -108,14 +108,16 @@ XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 ! --> includes xterm and urxvt
 ! ----------------------------------------------------------------------------
 *foreground:   #bbc2cf
-*background:   #282c34
 *.foreground:  #bbc2cf
+
+*background:   #282c34
 *.background:  #282c34
 
 *.cursorColor:  #bbc2cf
 *.cursorBlink:	true
 *.cursorUnderLine: true
 
+! pallette colors:
 ! black 
 *.color0:       #000000
 *color0:        #000000
