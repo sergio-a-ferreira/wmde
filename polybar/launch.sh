@@ -10,10 +10,11 @@
 # Otherwise you can use the nuclear option:
 killall -q polybar
 
-# Launch bar1 and bar2
-echo "---" | tee -a /tmp/polybar_mainbar.log #/tmp/polybar2.log
-polybar mainbar 2>&1 | tee -a /tmp/mainbar.log & disown
-#polybar bar2 2>&1 | tee -a /tmp/polybar2.log & disown
+# Launch mainbar
+bar=mainbar
+
+echo "- $(date +"%F %T") ---------" | tee -a /tmp/${bar}.log
+polybar ${bar} 2>&1 | tee -a /tmp/${bar}.log & disown
 
 echo "Bars launched..."
 
