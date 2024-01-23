@@ -63,15 +63,15 @@ gaps outer -2
 
 # ----------------------------------------------------------------------------
 # wallpaper
-#exec --no-startup-id sleep 1 && nitrogen --restore
-exec --no-startup-id feh --bg-fill ~/wallpaper.jpg
+exec --no-startup-id sleep 1 && nitrogen --restore
+#exec --no-startup-id feh --bg-fill ~/wallpaper.jpg
 
 # start conky:
 #exec_always --no-startup-id conky -c ~/.conky/victorConky/LinuxSmall
 
 # start a script to setup displays
 # uncomment the next line, use arandr to setup displays and save the file as monitor:
-#exec --no-startup-id ~/.screenlayout/monitor.sh
+exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -169,25 +169,35 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 # home
-set $ws1 "1:  "
+#set $ws1 "1:  "
+set $ws1 "1"
 # admin
-set $ws2 "2:  "
+#set $ws2 "2:  "
+set $ws2 "2"
 # dev
-set $ws3 "3:  "
+#set $ws3 "3:  "
+set $ws3 "3"
 # office
-set $ws4 "4:  "
+#set $ws4 "4:  "
+set $ws4 "4"
 # web
-set $ws5 "5:  "
+#set $ws5 "5:  "
+set $ws5 "5"
 # downloads
-set $ws6 "6:  "
+#set $ws6 "6:  "
+set $ws6 "6"
 # music
-set $ws7 "7:  "
+#set $ws7 "7:  "
+set $ws7 "7"
 # video / pictures
-set $ws8 "8:  "
+#set $ws8 "8:  "
+set $ws8 "8"
 # messaging / mail
-set $ws9 "9:  "
+#set $ws9 "9:  "
+set $ws9 "9"
 # VM's / containers / cloud
-set $ws10 "10:  "
+#set $ws10 "10:  "
+set $ws10 "10"
 
 
 # switch to workspace
