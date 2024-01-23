@@ -49,7 +49,7 @@ workspace_layout default
 new_window pixel 1
 
 # thin borders
-#hide_edge_borders both
+hide_edge_borders both
 
 # set inner/outer gaps
 gaps inner 8
@@ -225,6 +225,12 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+# Lock the system
+# lock with a picture:
+#bindsym $mod+l exec i3lock -i  ~/.config/i3/i3-lock-screen.png -p default|win -t
+# lock by blurring the screen:
+bindsym $mod+l exec ~/.config/i3/scripts/blur-lock
+
 
 # ----------------------------------------------------------------------------
 # resize window (you can also use the mouse for that)
@@ -257,30 +263,39 @@ bindsym $mod+r mode "resize"
 
 # ----------------------------------------------------------------------------
 # color settings for bar and windows
-set_from_resource $black	 i3wm.color0 		#000000
-set_from_resource $red		 i3wm.color1 		#ff0000
-set_from_resource $green	 i3wm.color2 		#008000
-set_from_resource $yellow	 i3wm.color3 		#ffff00
-set_from_resource $blue		 i3wm.color4 		#005fd7
-set_from_resource $magenta	 i3wm.color5 		#8700af
-set_from_resource $dcyan	 i3wm.color6 		#00d7af
-set_from_resource $lgrey	 i3wm.color7 		#abb2bf
-set_from_resource $dgrey	 i3wm.color8 		#4e4e4e
-set_from_resource $pink		 i3wm.color9 		#ff00ff
-set_from_resource $lgreen	 i3wm.color10 		#5fd700
-set_from_resource $orange	 i3wm.color11 		#d78700
-set_from_resource $lblue	 i3wm.color12 		#00afff
-set_from_resource $purple	 i3wm.color13 		#8700ff
-set_from_resource $lcyan	 i3wm.color14 		#00ffff
-set_from_resource $white	 i3wm.color15 		#000000
+set_from_resource $fg		 	i3wm.foreground		#ff0000
+set_from_resource $fgAlt	 	i3wm.foregroundAlt	#ff0000
+set_from_resource $bg		 	i3wm.background 	#ff0000
+set_from_resource $bgAlt	 	i3wm.backgroundAlt	#ff0000
+set_from_resource $urgent	 	i3wm.alert			#ff0000
+set_from_resource $urgText		i3wm.secondary		#ff0000
+set_from_resource $indicator	i3wm.disabled		#ff0000
+
+# colors from the pallette
+set_from_resource $black	 	i3wm.color0 		#000000
+set_from_resource $red			i3wm.color1 		#ff0000
+set_from_resource $green		i3wm.color2 		#008000
+set_from_resource $yellow	 	i3wm.color3 		#ffff00
+set_from_resource $blue		 	i3wm.color4 		#005fd7
+set_from_resource $magenta	 	i3wm.color5 		#8700af
+set_from_resource $dcyan	 	i3wm.color6 		#00d7af
+set_from_resource $lgrey	 	i3wm.color7 		#abb2bf
+set_from_resource $dgrey	 	i3wm.color8 		#4e4e4e
+set_from_resource $pink		 	i3wm.color9 		#ff00ff
+set_from_resource $lgreen	 	i3wm.color10 		#5fd700
+set_from_resource $orange	 	i3wm.color11 		#d78700
+set_from_resource $lblue	 	i3wm.color12 		#00afff
+set_from_resource $purple	 	i3wm.color13 		#8700ff
+set_from_resource $lcyan	 	i3wm.color14 		#00ffff
+set_from_resource $white	 	i3wm.color15 		#ffffff
 
 
 # define colors for windows:
-# class		        		border	bground	text		indicator	child_border
-#client.focused			  	$lyellow	$dyellow	$lorange	$dbrown		$lyellow
-#client.unfocused		  	$lorange	$dorange	$dyellow	$dbrown		$lorange
-#client.focused_inactive	$lorange	$dorange	$dyellow	$dbrown		$lorange
-#client.urgent		    	$grey 	$dgrey	$white	$dbrown		$grey
+# class		        	border	background	text		indicator	child_border
+client.focused			$bgAlt	$bgAlt		$bg			$indicator	$bgAlt
+client.unfocused		$bg		$bg			$fg			$indicator	$bg
+client.focused_inactive	$fg		$fg			$bg			$indicator	$fg
+client.urgent		    $urgent	$urgent		$urgText	$indicator	$urgent
 
 ###############################################################################
 ## BAR SECTION ----------------------------------------------------------------
