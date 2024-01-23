@@ -107,15 +107,29 @@ XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 ! FOR ALL PROGRAMS THAT USE XRESOURCES
 ! --> includes xterm and urxvt
 ! ----------------------------------------------------------------------------
-*foreground:   #bbc2cf
-*.foreground:  #bbc2cf
 
-*background:   #282c34
-*.background:  #282c34
+! light grey  xwindows; pacman module
+*.foreground:     #bbc2cf
+! dark blue: xworkspaces active
+*.foregroundAlt:  #074a7c
 
-*.cursorColor:  #bbc2cf
-*.cursorBlink:	true
-*.cursorUnderLine: true
+! dark grey: unfocused 
+*.background:     #282c34
+! light blue
+*.backgroundAlt:  #79b5ec
+
+! red:  alert; urgent
+*.alert:         #ff0000
+! greenish: used in polybar keyboard module; and i3 urgent
+*.secondary:    #1d8779
+! grey
+*.disabled:     #707880
+
+
+*.cursorColor:      #bbc2cf
+*.cursorBlink:      true
+*.cursorUnderLine:  true
+
 
 ! pallette colors:
 ! black 
