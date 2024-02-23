@@ -183,9 +183,9 @@ set $ws6 "6:  "
 # music
 set $ws7 "7:  "
 # video / pictures
-set $ws8 "8:  "
+set $ws8 "8:  "
 # messaging / mail
-set $ws9 "9:  "
+set $ws9 "9:  "
 # VM's / containers / cloud
 set $ws10 "10:  "
 
