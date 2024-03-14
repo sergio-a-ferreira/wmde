@@ -32,13 +32,14 @@ typeset -A file_info=(
 
 	[xinitrc]="link|${DOTFILES_DIR}/X/xinitrc|${HOME}/.xinitrc"
 	[xresources]="link|${DOTFILES_DIR}/X/Xresources|${HOME}/.Xresources"
-	# add new files here
+	[gtk-settings]="link|${DOTFILES_DIR}/gtk-3.0/settings.ini|${HOME}/.config/gtk-3.0/settings.ini"
 	#  TODO:: keyboard.conf needs sudo
 	#[keyboard.conf]="copy|${DOTFILES_DIR}/X/00-keyboard.conf|/etc/X11/xorg.conf.d/00-keyboard.conf"
 	[i3wm-config]="link|${DOTFILES_DIR}/i3wm/config|${HOME}/.config/i3/config"
 	[i3wm-scripts]="link|${DOTFILES_DIR}/i3wm/scripts|${HOME}/.config/i3/scripts"
 	[polybar-config]="link|${DOTFILES_DIR}/polybar/config.ini|${HOME}/.config/polybar/config.ini"
 	[polybar-launch]="link|${DOTFILES_DIR}/polybar/launch.sh|${HOME}/.config/polybar/launch.sh"
+	# add new files here
 )
 
 # ==============================================================================
