@@ -330,3 +330,4 @@ client.urgent		    $urgent	$urgent		$urgText	$indicator	$urgent
 
 # polybar:
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
