@@ -34,6 +34,10 @@ exec --no-startup-id dex --autostart --environment i3
 # configure multiple keyboard layouts and hotkey to switch (Alt+CAPSLOCK in this example)
 #exec --no-startup-id setxkbmap -layout 'us,sk' -variant altgr-intl,qwerty -option 'grp:alt_caps_toggle'
 
+# start a script to setup displays
+# uncomment the next line, use arandr to setup displays and save the file as monitor:
+#exec --no-startup-id ~/.screenlayout/monitor.sh
+exec --no-startup-id ~/dualHV.sh
 
 ##############################################################################
 # Workspace layout
@@ -69,10 +73,6 @@ exec --no-startup-id sleep 1 && nitrogen --restore
 # start conky:
 #exec_always --no-startup-id conky -c ~/.conky/victorConky/LinuxSmall
 
-# start a script to setup displays
-# uncomment the next line, use arandr to setup displays and save the file as monitor:
-exec --no-startup-id ~/.screenlayout/monitor.sh
-
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -102,7 +102,8 @@ tiling_drag modifier titlebar
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec xrdb -merge ~/.Xresources && xterm
+#bindsym $mod+Return exec xrdb -merge ~/.Xresources && xterm
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill

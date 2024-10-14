@@ -39,6 +39,8 @@ typeset -A file_info=(
 	[i3wm-scripts]="link|${DOTFILES_DIR}/i3wm/scripts|${HOME}/.config/i3/scripts"
 	[polybar-config]="link|${DOTFILES_DIR}/polybar/config.ini|${HOME}/.config/polybar/config.ini"
 	[polybar-launch]="link|${DOTFILES_DIR}/polybar/launch.sh|${HOME}/.config/polybar/launch.sh"
+	[kitty-config]="link|${DOTFILES_DIR}/kitty/kitty.conf|${HOME}/.config/kitty/kitty.conf"
+	[kitty-theme]="link|${DOTFILES_DIR}/kitty/current-theme.conf|${HOME}/.config/kitty/current-theme.conf"
 	# add new files here
 )
 
