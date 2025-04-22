@@ -22,7 +22,7 @@ font pango:Noto Sans Regular 10
 # Compositor
 # https://wiki.archlinux.org/title/Picom
 # https://man.archlinux.org/man/picom.1.en
-exec --no-startup-id picom -b -c
+exec --no-startup-id picom -b -c -f
 
 # XDG autostart to start .desktop files using dex.
 # https://wiki.archlinux.org/index.php/XDG_Autostart
